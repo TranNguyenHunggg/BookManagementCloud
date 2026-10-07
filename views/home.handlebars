@@ -1,0 +1,34 @@
+
+<h1>Quản lý sách</h1>
+
+<a href="/books/add">Thêm sách</a>
+
+<h2>Danh sách sách</h2>
+
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Mã sản phẩm</th>
+            <th>Tên sách</th>
+            <th>Giá gốc</th>
+            <th>Giá sau thuế</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each books}}
+        <tr>
+            <td>{{this.productCode}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.priceAfterTax}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<footer>
+    <p>Họ tên: {{fullName}}</p>
+    <p>MSSV: {{mssv}}</p>
+    <p>VAT áp dụng: {{vat}}%</p>
+</footer>
